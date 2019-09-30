@@ -12,13 +12,12 @@ export class AppComponent implements OnInit {
   private entradaService; 
   
   ngOnInit() {
-    this.ids = [21,25,45,"Probar error 422 paso siguiente borrar elementos y agregar nuevos"]; 
+    this.ids = [21,25,45]; 
   }
 
   constructor(EntradaService :EntradaService){ 
     this.entradaService = EntradaService;
   }
-
   title = 'projectoExperis';
    cambia : string;
    suma :  number;
@@ -31,7 +30,6 @@ export class AppComponent implements OnInit {
     entrada: '',
     segunda: ''
   };
-
 
   agregarElemento(elemento){
     this.ids.push(elemento);
@@ -51,10 +49,10 @@ export class AppComponent implements OnInit {
         this.resta = this.entradaService.modeloDevuelta.restaElemento;
         this.multiplicacion = this.entradaService.modeloDevuelta.multiplicacionElementos;
         this.division = this.entradaService.modeloDevuelta.divisionElementos;
-        console.log("devuelta si funciona "+this.entradaService.modeloDevuelta.sumaelemento); 
-        console.log("devuelta si funciona "+this.entradaService.modeloDevuelta.restaElemento);
-        console.log("devuelta si funciona "+this.entradaService.modeloDevuelta.multiplicacionElementos);
-        console.log("devuelta si funciona "+this.entradaService.modeloDevuelta.divisionElementos);  
+        console.log("devuelta "+this.entradaService.modeloDevuelta.sumaelemento); 
+        console.log("devuelta "+this.entradaService.modeloDevuelta.restaElemento);
+        console.log("devuelta "+this.entradaService.modeloDevuelta.multiplicacionElementos);
+        console.log("devuelta "+this.entradaService.modeloDevuelta.divisionElementos);  
       });
   //  }
   /*  
