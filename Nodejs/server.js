@@ -7,7 +7,7 @@ const bodyParser = require('body-parser');
 app.use(bodyParser.json());
 
 app.use((req, res, next) => {
-  res.header('Access-Control-Allow-Origin', 'http://localhost:4200');
+  res.header('Access-Control-Allow-Origin', 'http://localhost:3000');
   res.header('Access-Control-Allow-Headers', 'Authorization, X-API-KEY, Origin, X-Requested-With, Content-Type, Accept, Access-Control-Allow-Request-Method');
   res.header('Access-Control-Allow-Methods', 'GET, POST, OPTIONS, PUT, DELETE');
   res.header('Allow', 'GET, POST, OPTIONS, PUT, DELETE');
@@ -65,7 +65,7 @@ app.post('/controller', function (req, res) {
     });
   
 
-const port = process.env.PORT || 3000;;
+const port = process.env.PORT || 8081;;
 app.listen(port, function () {
   console.log('myapp listening on port ' + port);
 });

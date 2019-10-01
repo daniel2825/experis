@@ -21,7 +21,7 @@ export class EntradaService {
     public enviarOperacionesArray(arrayDeNumeros){
         this.ids = arrayDeNumeros; 
 
-        return this.httpClient.post('http://localhost:3000/operaNumeros', this.ids,
+        return this.httpClient.post('http://localhost:8081/operaNumeros', this.ids,
          {
             headers: new HttpHeaders({
                   'Content-type' : 'application/json'
@@ -54,7 +54,7 @@ export class EntradaService {
     }
 
     public sendEntradas(obj){
-        return this.httpClient.post('http://localhost:3000/controller', obj,
+        return this.httpClient.post('http://localhost:8081/controller', obj,
          {
             headers: new HttpHeaders({
                   'Content-type' : 'application/json'

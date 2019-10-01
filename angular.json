@@ -63,7 +63,8 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "projectoExperis:build"
+            "browserTarget": "projectoExperis:build",
+            "port": 3000 
           },
           "configurations": {
             "production": {
@@ -121,5 +122,6 @@
         }
       }
     }},
-  "defaultProject": "projectoExperis"
+  "defaultProject": "projectoExperis",
+  
 }
